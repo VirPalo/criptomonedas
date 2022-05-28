@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/a3d6d50f6c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilo_contacto.css">
+    <style>
+        * {font-family: 'Quicksand', sans-serif;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo_principal">CRIPTOMONEDAS</h1>
+        <nav class="botonera_principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article class="texto_form">
+            <h1 class="titulo_form">Queremos conocer tu opinión</h1>
+            <p class="contenido_form">Sentite libre de contactarnos para recibir o enviar información sobre criptomonedas y para reclamos o mejoras que se puedan realizar en la página.</p>
+            <p class="contenido_form">■ Redacción: Elegí esta opción si tenes algún aporte o reclamo a realizar en el contenido de la página.</p>
+            <p class="contenido_form">■ Tecnología: Elegí esta opción si encontras un error, mal funcionamiento o para sugerir mejoras en la página.</p>
+        </article>
+
+        <div class="formulario">
+            <form action="" name="formulario" method="get">
+                <div class="form-group"> 
+                    <label for="nombre" class="titulo">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" size="20" placeholder="Nombre">
+                </div>
+    
+                <div class="form-group"> 
+                    <label for="correo" class="titulo">Correo Electrónico</label>
+                    <input type="text" name="correo" id="correo-electronico" placeholder="ejemplo@email.com">
+                </div>
+    
+                <div class="form-group"> 
+                    <label for="area" class="titulo">Área a contactar</label>
+                    <input type="radio" name="area" id="redaccion" value="Redacción">Redacción
+                    <input type="radio" name="area" id="tecnología" value="Tecnología">Tecnología
+                </div>
+    
+                <div class="form-group">
+                    <label for="mensaje" class="titulo">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+    
+                <input type="submit" id="btn" name="btn" value="enviar">
+            </form>
+        </div>
+        
+        <script>
+            (function() {
+                var formulario = document.getElementsByName ('formulario')[0];
+                elementos = formulario.elements,
+                boton = document.getElementById('btn')
+
+                var validarNombre = function (e) {
+                    if (formulario.nombre.value == 0) {
+                        alert("Completa el campo Nombre")
+                        e.preventDefault();
+                    }
+                };
+
+                var validarCorreo = function (e) {
+                    if (formulario.correo.value == 0) {
+                        alert ("Completa el campo Correo")
+                        e.preventDefault();
+                    }
+                };
+
+                var validarArea = function(e) {
+                    if (formulario.area[0].checked==true || formulario.area[1].checked==true) {
+                    } else {
+                        alert ("Completa el campo Area a contactar")
+                        e.preventDefault();
+                    }
+                };
+
+                var validarMensaje = function (e) {
+                    if (formulario.mensaje.value ==0) {
+                        alert ("Completa el campo Mensaje")
+                        e.preventDefault();
+                    }
+                };
+
+                var validar = function (e) {
+                    validarNombre(e);
+                    validarCorreo(e);
+                    validarArea(e);
+                    validarMensaje(e);
+                };
+
+                formulario.addEventListener('submit',validar)
+            }())
+        </script>
+
+    </section>
+
+    <footer>
+        <div id="datos">
+            <p>criptomonedas@desdecero.com.ar</p>
+        </div>
+        <nav id="redes">
+            <ul>
+                <li><a href="#" id="google"><i class="fa-brands fa-google"></i></a></li>
+                <li><a href="#" id="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#" id="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" id="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" id="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

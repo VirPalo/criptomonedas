@@ -1,0 +1,661 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Acme', sans-serif;
+  font-family: 'Alata', sans-serif;
+  font-family: 'Erica One', cursive;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    width: 100%;
+    height: auto; 
+    margin: 0;
+    padding: 0;
+}
+
+.titulo_principal {
+    width: 98%;
+    height: 0.2em;
+    margin: 0 0.5em 0.5em;
+    padding: 0.5em 0.5em;
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    letter-spacing: 12px;
+}
+
+/*Botonera principal*/
+
+ :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+
+::before, ::after {
+    position: absolute;
+    content: "";
+  }
+
+ .botonera_principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 99%;
+    margin: 0.5em 0.5em 0 0.5em; 
+  }
+
+  .botonera_principal ul li{
+    position: relative;
+    display: inline-block;
+    width: auto; 
+    height: auto;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 0.5em;
+    min-width: 15%;
+ }
+ 
+  .botonera_principal ul li {
+    display: inline-block;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .botonera_principal ul li a {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; 
+    left: 0;
+    width: 99%;
+    padding: 1em 4em;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  .botonera_principal ul li a{
+    color: #000;
+    background-color: #fff;
+  }
+
+  .botonera_principal ul li a:hover {
+    color: #000;
+  }
+
+  .botonera_principal ul li::before,
+  .botonera_principal ul li::after {
+    width: 15%; 
+    height: 2px;
+    background-color: #000;
+    z-index: 2;
+  }
+  
+ .botonera_principal ul li::before,
+.botonera_principal ul li::after {
+  left: 0%;
+  height: 30%;
+  width: 1.5px;
+  transition: height 0.2s 0.35s ease-out;
+}
+
+.botonera_principal ul li::before {
+  top: 50%;
+}
+
+.botonera_principal ul li::after {
+  bottom: 50%;
+}
+
+.botonera_principal ul li:hover::before {
+  height: 50%;
+  transition: height 0.2s ease-in;   
+}
+
+.botonera_principal ul li:hover::after {
+  height: 50%;
+  transition: height 0.1s ease-in;   
+}
+
+.botonera_principal ul li a::before,
+.botonera_principal ul li a::after {
+  width: 0%; 
+  height: 0%;
+  background: transparent;
+  opacity: 0;
+  z-index: 2;
+}
+.botonera_principal ul li a::after {
+  bottom: 0; 
+  left: 0%;
+  border-bottom: 2px solid #000;
+  transition: width 0.25s ease-in, opacity 0s 0.35s;   
+}
+.botonera_principal ul li a:hover::after {
+  width: 100%;
+  opacity: 1;
+  transition: width 0.25s 0.2s ease-out, opacity 0s 0.2s;   
+}
+.botonera_principal ul li a::before {
+  top: 0%; 
+  left: 0%;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transition: height 0.15s ease-in, width 0.2s 0.15s linear, opacity 0s 0.35s;   
+}
+.botonera_principal ul li a:hover::before {
+  width: 100%; 
+  height: 96%;
+  opacity: 1;
+  transition: width 0.2s 0.1s linear, height 0.15s 0.3s ease-out, opacity 0s 0.1s;   
+}
+
+/*Fin botonera principal*/
+
+section {
+  overflow: hidden;
+  background-color: #000;
+  margin: 0;
+}
+
+/*Primer article*/
+
+.primer_texto {
+  width: 80%;
+  height: auto;
+  margin: 0.5em 0.5em;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #fff;
+  float: right;
+}
+
+.titulo_primer_texto {
+  font-size: 1.5em;
+  letter-spacing: 0.5em; 
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.contenido_primer_texto {
+  text-align: justify;
+  font-size: 17px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+.img_primer_texto {
+  width: 45%;
+  height: auto;
+  background-size: cover;
+  margin-top: 0.5em;
+  margin-left: auto;
+  float: right;
+}
+
+/*Segundo article*/
+
+.segundo_texto {
+  width: 80%;
+  height: auto;
+  margin: 0.5em 0.5em;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  background-color: transparent;
+  float:right;
+  color: #fff;
+}
+
+.titulo_segundo_texto {
+  font-size: 2em;
+  color: #fff;
+  letter-spacing: 0.5em; 
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #fff
+}
+
+.contenido_segundo_texto {
+  text-align: justify;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+.imagen_bitcoin {
+  width: 35%;
+  height: auto;
+  background-size: cover;
+  float: right;
+  margin-left: auto;
+}
+
+/*Tercer article*/
+
+.tercer_texto {
+  width: 80%;
+  height: auto;
+  margin: 0.5em 0.5em;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  background-color: transparent;
+  float:right;
+  color: #fff;
+}
+
+.titulo_tercer_texto {
+  font-size: 1.4em;
+  letter-spacing: 0.5em; 
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #fff
+}
+
+.contenido_tercer_texto {
+  text-align: justify;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+}
+
+.img_tercer_texto {
+  width: 18%;
+  height: auto;
+  background-size: cover;
+  float: left;
+}
+
+
+aside {
+  width: 20%;
+}
+ 
+.botonera_aside_criptos {
+  overflow: hidden;
+  width: 20%;
+  padding: 1.2em 0;
+  margin: 1.2em 0;
+  position: fixed;
+  top: 7em;
+  left: auto;
+}
+
+.botonera_aside_titulo {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.botonera_aside_criptos ul li{
+  list-style: none;
+  padding: 0.9em 0.5em;
+  border-bottom:solid 0.5px #fff;
+  text-align: center;
+}
+
+.botonera_aside_criptos ul li a{
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.3em;
+  padding: 0.5em 0.5em;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 1em;
+  color: #000;
+  background-color:#fff
+}
+
+#datos {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1em;
+  text-align: center;
+  border-bottom:solid 0.5px #000;
+}
+
+#redes {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#redes ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#redes ul li {
+  display: inline;
+}
+
+#redes ul li a {
+  display: inline-block;
+  padding: 2px 15px;
+  color: #2f2f2f;
+  line-height: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#redes ul:hover a {
+  filter:blur(1.5px);
+}
+
+#redes ul li a:active {
+  color: #2f2f2f;
+  background-color:rgb(0, 0, 0);
+}
+
+#redes ul li a:visited {
+  color: #2f2f2f;
+  background-color: transparent;
+}
+
+#redes ul li a:link {
+  color: #2f2f2f;
+  background-color:transparent;
+}
+
+#redes ul li a:hover {
+  color: #e8a73b;
+  background-color:transparent;
+  transform: translateY(-3px) scale(1.10);
+  filter:none;
+}
+
+/*Responsive Tablet*/
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  header {
+    width: 100%; 
+}
+
+.titulo_principal {
+    width: 98%;
+}
+
+/*Botonera principal*/
+
+ .botonera_principal {
+    max-width: 95%; 
+  }
+
+  .botonera_principal ul li{
+    width: 20%; 
+    height: auto;
+    min-width: auto;
+ }
+
+  .botonera_principal ul li a {
+    padding: 1em 1.5em;
+  }
+
+/*Fin botonera principal*/
+
+section {
+  overflow: hidden;
+  background-color: #000;
+}
+
+/*Primer article*/
+
+.primer_texto {
+  width: 80%;
+  margin: 0.5em 0.5em;
+  padding: 1em 2em;
+}
+
+.titulo_primer_texto {
+  font-size: 1.2em;
+  letter-spacing: 0.2em; 
+}
+
+.contenido_primer_texto {
+  font-size: 15px;
+  width: 100%;
+}
+
+.img_primer_texto {
+  width: 100%;
+  height: auto;
+  float: center;
+}
+
+/*Segundo article*/
+
+.segundo_texto {
+  margin: 0.5em 0.5em;
+  padding: 1em 2em;
+}
+
+.titulo_segundo_texto {
+  font-size: 1.2em;
+  letter-spacing: 0.2em; 
+}
+
+.contenido_segundo_texto {
+  font-size: 15px;
+  width: 100%;
+}
+
+.imagen_bitcoin {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+/*Tercer article*/
+
+.tercer_texto {
+  margin: 0.5em 0.5em;
+  padding: 1em 3em;
+}
+
+.titulo_tercer_texto {
+  font-size: 1.2em;
+  letter-spacing: 0.2em; 
+}
+
+.contenido_tercer_texto {
+  font-size: 15px;
+  width: 100%;
+}
+
+.img_tercer_texto {
+  width: 100%;
+}
+
+
+aside {
+  width: 19%;
+}
+ 
+.botonera_aside_criptos {
+  width: 19%;
+  top: 5.5em;
+}
+
+.botonera_aside_titulo {
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.botonera_aside_criptos ul li{
+  list-style: none;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.botonera_aside_criptos ul li a{
+  letter-spacing: 0;
+  padding: 0.5em 0;
+}
+
+}
+
+@media all and (max-width: 600px) {
+  header {
+    width: 100%;
+}
+
+.titulo_principal {
+    width: 95%;
+}
+
+/*Botonera principal*/
+
+ .botonera_principal {
+    max-width: 100%;
+  }
+
+  .botonera_principal ul li {
+    text-align: center;
+    display: block;
+  }
+
+  .botonera_principal ul li a {
+    text-align: center;
+    width: 100%;
+    padding: 1em 3em;
+  }
+
+/*Fin botonera principal*/
+
+section {
+  background-color: #000;
+  width: 100%;
+  height: auto;
+}
+
+/*Primer article*/
+
+.primer_texto {
+  width: 95%;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.titulo_primer_texto {
+  font-size: 1.2em;
+  letter-spacing: 0.2em; 
+}
+
+.contenido_primer_texto {
+  font-size: 15px;
+  width: 100%;
+}
+
+.img_primer_texto {
+  width: 100%;
+  height: auto;
+  float: center;
+}
+
+/*Segundo article*/
+
+.segundo_texto {
+  width: 95%;
+  margin: 0.5em 0.5em;
+  padding: 1em 2em;
+}
+
+.titulo_segundo_texto {
+  font-size: 1.2em;
+  letter-spacing: 0.2em; 
+}
+
+.contenido_segundo_texto {
+  font-size: 15px;
+  width: 100%;
+}
+
+.imagen_bitcoin {
+  width: 100%;
+  height: auto;
+  float: center;
+}
+
+/*Tercer article*/
+
+.tercer_texto {
+  width: 95%;
+  margin: 0.5em 0.5em;
+  padding: 1em 2em;
+}
+
+.titulo_tercer_texto {
+  font-size: 1.2em;
+  letter-spacing: 0.2em; 
+}
+
+.contenido_tercer_texto {
+  font-size: 15px;
+  width: 100%;
+}
+
+.img_tercer_texto {
+  width: 100%;
+}
+
+aside {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  padding: 0 0.5em 0.5em 0.5em;
+  overflow: hidden;
+}
+ 
+.botonera_aside_criptos {
+  width: 90%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  position: relative;
+}
+
+.botonera_aside_titulo {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.botonera_aside_criptos ul li{
+  padding: 0.5em;
+}
+
+.botonera_aside_criptos ul li a{
+  letter-spacing: 0.2em;
+  padding: 0.5em;
+}
+
+}
